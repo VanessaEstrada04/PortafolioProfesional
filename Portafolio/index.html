@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vanessa | Portfolio</title>
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/proye.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/contacto.css">
+
+     <!-- Librería p5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+
+    <!-- EL P5 sketch -->
+    <script src="js/sketch.js"></script>
+  <!-- Libreria GSAP-->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+   <header>
+
+    <nav class="navbar">
+
+        <a href="#inicio" class="logo">
+            V<span>_</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#inicio" class="active">Inicio</a></li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#proyec">Portafolio</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+    </nav>
+
+</header>
+
+    <!-- ================= HERO ================= -->
+
+<section class="hero" id="inicio">
+
+    <h1 class="title">
+        Hola,<br>
+        soy <span>Vanessa.</span>
+    </h1>
+
+    <h2 class="subtitle">
+        Full Stack Developer
+    </h2>
+
+    <p class="description">
+        Transformo ideas en experiencias digitales
+        donde el diseño y el código trabajan juntos.
+    </p>
+    
+    <div class="actions">
+  <a class="btn btn-primary btn-cv" href="Material/CV.pdf">
+    Descargar CV
+    <i class="bi bi-download"></i>
+  </a>
+</div>
+      
+    </div>
+
+</section>
+
+    <!-- ================= SOBRE MI ================= -->
+
+<section class="sobremi" id="about">
+  <div class="sobremi__label">SOBRE MÍ</div>
+  <div class="sobremi__content">
+    <div class="sobremi__texto">
+      <p class="sobremi__parrafo">
+        Soy desarrolladora Java Full Stack Jr, con especial interés en Frontend.
+        Me apasiona crear interfaces funcionales y bien pensadas, combinando lógica
+        de backend con experiencias de usuario claras e intuitivas.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="habilidades">
+  <div class="habilidades__label">HABILIDADES</div>
+  <div class="habilidades__tags">
+    <span class="habilidades__tag">HTML</span>
+    <span class="habilidades__tag">CSS</span>
+    <span class="habilidades__tag">JavaScript</span>
+    <span class="habilidades__tag">Java</span>
+    <span class="habilidades__tag">Bootstrap</span>
+    <span class="habilidades__tag">Git</span>
+    <span class="habilidades__tag">APIs</span>
+    <span class="habilidades__tag">Bash</span>
+  </div>
+
+    <!-- ================= Proyectos ================= -->
+</section>
+<section class="proyectos"id="proyec" >
+<div class="proyectos__label">PROYECTOS</div>
+<div class="proyectos__lista">
+
+    <a href="https://vanessaestrada04.github.io/Hackaton./" class="proyectos__item">
+      <span class="proyectos__numero">01</span>
+      <div class="proyectos__info">
+        <span class="proyectos__titulo">Hackaton-Punto Adiona</span>
+        <span class="proyectos__tech">HTML · CSS · JavaScript</span>
+      </div>
+      <i class="bi bi-arrow-right proyectos__flecha"></i>
+    </a>
+
+     <a href="#" class="proyectos__item">
+      <span class="proyectos__numero">02</span>
+      <div class="proyectos__info">
+        <span class="proyectos__titulo">E-Commerce</span>
+        <span class="proyectos__tech">HTML · CSS · JavaScript</span>
+      </div>
+      <i class="bi bi-arrow-right proyectos__flecha"></i>
+    </a>
+
+<!-- ================= BLOG ================= -->
+
+
+<section class="blog" id="blog">
+    <div class="blog__label">&gt; BLOG</div>
+
+    <div class="blog-card">
+
+        <span class="blog-date">20 JUL 2026</span>
+
+        <h3>Reflexión: El código también comunica.</h3>
+
+        <p>
+            El desarrollo frontend no solo consiste en hacer que una aplicación
+            funcione, sino en crear experiencias intuitivas y accesibles para
+            las personas.
+        </p>
+
+        <button id="openModal" class="btn-blog">
+            Leer entrada →
+        </button>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+        <div class="modal-box__border modal-box__border--left"></div>
+        <div class="modal-box__border modal-box__border--right"></div>
+
+        <div class="modal-box__inner">
+            <div class="modal-header">
+                <div>
+                    <span class="modal-eyebrow">Reflexión</span>
+                    <h2 id="modalTitle">Mi camino como desarrolladora Java Jr.</h2>
+                </div>
+                <button class="modal-close" id="closeModal" aria-label="Cerrar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+
+            <hr class="modal-divider">
+
+            <div class="modal-meta-row">
+                <span class="blog-date">20 julio 2026 </span>
+                <div class="modal-scroll-icon">
+                    <i class="bi bi-arrow-down"></i>
+                </div>
+            </div>
+
+            <p>
+                En el desarrollo frontend no solo importa que una aplicación funcione,
+                cada interfaz representa una conexión entre la tecnología y las personas.
+            </p>
+
+            <p>
+                Durante mi aprendizaje como desarrolladora junior he descubierto que el código y el arte tienen algo en común: 
+                ambos nacen de la creatividad, la imaginación y la intención de comunicar.
+                 Me gusta combinar la lógica de la programación con mi lado creativo para crear proyectos funcionales y con una identidad propia.
+
+                Actualmente sigo fortaleciendo mis habilidades en Java, desarrollo web y resolución de problemas.
+                 Sé que aún tengo mucho por aprender, especialmente en backend, bases de datos y buenas prácticas de programación.
+                 Mi objetivo es seguir creciendo como desarrolladora, mejorar cada día y adquirir
+                  la experiencia necesaria para crear soluciones innovadoras combinando tecnología y creatividad.
+            </p>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ================= CONTACTO ================= -->
+<section class="contacto" id="contacto">
+    <div class="contacto__label">CONTACTO</div>
+
+    <div class="contacto__row">
+        <div class="contacto__social">
+            <a href="https://github.com/VanessaEstrada04" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vanessa-estrada-arellano/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- LLAMO A MI JS -->
+    <script src="js/animacion.js"></script>
+     <script src="js/navegar.js"></script>
+
+
+</body>
+
+</html>

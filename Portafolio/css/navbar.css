@@ -1,0 +1,167 @@
+/* ============================================
+   NAVBAR — Vanessa Portfolio
+   Tipografías: Space Grotesk (logo) / IBM Plex Mono (links)
+   (Ya importadas en tu index.html vía Google Fonts)
+   ============================================ */
+
+ :root{
+  --nav-height: 80px;
+  --nav-height-scrolled: 64px;
+
+  --color-bg: #0A0A0A;
+  --color-fg: #F2F2F0;
+  --color-muted: #8A8A85;
+  --color-accent: #D7FF2F;
+
+  --color-glass-bg: rgba(10, 10, 10, 0.6);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+
+  --nav-padding-x: clamp(1.5rem, 5vw, 4rem);
+  --gap-links: clamp(1.25rem, 2.5vw, 2.25rem);
+
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 0.25s;
+  --dur-medium: 0.4s;
+}
+
+/* ============================================
+   Contenedor fijo
+   ============================================ */
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-height);
+  padding: 0 var(--nav-padding-x);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition:
+    height var(--dur-medium) var(--ease-premium),
+    background var(--dur-medium) var(--ease-premium),
+    backdrop-filter var(--dur-medium) var(--ease-premium),
+    border-color var(--dur-medium) var(--ease-premium);
+}
+
+
+
+/* ============================================
+   Logo — Space Grotesk
+   ============================================ */
+.logo{
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+  color: var(--color-fg);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo span{
+  color: var(--color-accent);
+}
+
+/* ============================================
+   Links — IBM Plex Mono, mayúsculas, espaciado
+   ============================================ */
+.nav-links{
+  display: flex;
+  align-items: center;
+  gap: var(--gap-links);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-links a{
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  text-decoration: none;
+  padding: 0.4rem 0.1rem;
+  transition: color var(--dur-fast) var(--ease-premium);
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible{
+  color: var( --color-accent);
+}
+
+.nav-links li:has(a.active)::after{
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 860px){
+  .nav-links{ display: none; }
+  .hamburger{ display: block; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+
+/* ============================================
+   BUTTON
+   ============================================ */
+.actions {
+  margin-top: 2rem;
+  
+  position: relative;
+  z-index: 1;
+
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 16px 34px;
+
+  background: #D7FF2F;
+  color: #111;
+
+  text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(215,255,47,.35);
+}
+
+.btn-primary i {
+  font-size: 1.1rem;
+}
