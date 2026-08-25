@@ -1,0 +1,77 @@
+.proyectos {
+  position: relative;
+  z-index: 2;
+  padding: 0 clamp(2rem, 8vw, 8rem) 80px;
+  
+}
+
+.proyectos__label {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.proyectos__label::before { content: ">"; }
+
+.proyectos__lista {
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+}
+
+.proyectos__item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 8px;
+  border-bottom: 1px solid var(--color-muted);
+  text-decoration: none;
+  transition: background 0.25s ease, padding-left 0.25s ease;
+}
+
+.proyectos__item:hover {
+  background: rgba(215, 255, 47, 0.05);
+  padding-left: 16px;
+}
+
+.proyectos__numero {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  width: 32px;
+}
+
+.proyectos__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.proyectos__titulo {
+  font-family: var(--font-display);
+  color: var(--color-fg);
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.proyectos__tech {
+  font-family: var(--font-mono);
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.proyectos__flecha {
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  transition: transform 0.25s ease;
+}
+
+.proyectos__item:hover .proyectos__flecha {
+  transform: translateX(6px);
+}
