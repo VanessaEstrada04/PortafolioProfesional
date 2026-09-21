@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btnCV,
       { boxShadow: '0 0 0px rgba(215, 255, 47, 0)' },
       {
-        boxShadow: '0 0 35px rgba(215, 255, 47, 0.9)',
+        boxShadow: '0 0 35px rgba(160, 32, 240, 0.9)',
         duration: 0.3,
         yoyo: true,
         repeat: 1,

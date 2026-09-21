@@ -11,7 +11,7 @@
   --color-bg: #0A0A0A;
   --color-fg: #F2F2F0;
   --color-muted: #8A8A85;
-  --color-accent: #D7FF2F;
+  --color-accent: #9D4DFF;
 
   --color-glass-bg: rgba(10, 10, 10, 0.6);
   --color-glass-border: rgba(255, 255, 255, 0.08);
@@ -142,7 +142,7 @@ header{
 
   padding: 16px 34px;
 
-  background: #D7FF2F;
+  background: #9D4DFF;
   color: #111;
 
   text-decoration: none;

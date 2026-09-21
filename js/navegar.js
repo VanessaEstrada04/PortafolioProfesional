@@ -24,9 +24,9 @@ document.querySelectorAll(".habilidades__tag").forEach((tag) => {
 
   tag.addEventListener("mouseenter", () => {
     gsap.to(tag, {
-      boxShadow: "0 0 18px 2px rgba(215, 255, 47, 0.6)",
-      borderColor: "#D7FF2F",
-      color: "#D7FF2F",
+      boxShadow: "0 0 18px 2px rgba(160, 32, 240, 0.6)",
+      borderColor: "#9D4DFF",
+      color: "#9D4DFF",
       scale: 1.05,
       duration: 0.3,
       ease: "power2.out"
